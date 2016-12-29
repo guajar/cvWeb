@@ -1,0 +1,102 @@
+body {
+	margin: 0px;
+	font-family: 'Space Mono', monospace;
+	height: 100%;
+}
+
+.navbar {
+	width: 100%;
+	background-color: #F7F7F7;
+	position: fixed;
+	top: 0;
+}
+
+.navbar > .navbar-list {
+	list-style-type: none;
+	margin: 0;
+	float: right;
+	font-size: 0;
+}
+
+.navbar > .navbar-list > .navbar-item {
+	display: inline-block;
+	font-size: 16px;
+}
+
+
+.navbar > .navbar-list > .navbar-item > .navbar-link {
+	display: inline-block;
+	text-decoration: none;
+	padding: 20px;
+	color: rgba(0, 0, 0, 0.92);
+	transition: all 0.5s;
+}
+
+.navbar > .navbar-list > .navbar-item.active > .navbar-link {
+	color: #F7F7F7;
+	background-color: #A4A4A4;
+}
+
+.navbar > .navbar-list > .navbar-item > .navbar-link:hover {
+	color: #F7F7F7;
+	background-color: #A4A4A4;
+}
+
+.header > .title {
+	position: absolute;
+	top: 65%;
+	width: 100%;
+	color: rgba(0, 0, 0, 0.92);
+	font-family: 'Space Mono', monospace;
+	text-align: left;
+	font-size: 30px;
+	/*visibility: hidden;*/
+	/*animation: titleAnimation 2s forwards;
+	animation-delay: 0.5s;*/
+
+}
+
+.header > .title-img {
+	width: 100%;
+	background-image: url("../images/portada.jpg");
+	height: 100vh;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	/*transition: all 0.5s;*/
+}
+
+.header > .foto {
+	max-width: 50%;
+	float: left;
+}
+
+.header > .intro {
+	max-width: 50%;
+	float: right;
+}
+
+.jamal-photo img {
+	height: 300px;
+	max-width: 100%;
+	border-radius: 50%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.container {
+	min-height: 100%;
+	margin-bottom: -50px;
+}
+
+.footer {
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.92);
+	height: 50px;
+	color: #F7F7F7;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+}
+

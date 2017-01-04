@@ -23,7 +23,6 @@ body {
 	font-size: 16px;
 }
 
-
 .navbar > .navbar-list > .navbar-item > .navbar-link {
 	display: inline-block;
 	text-decoration: none;
@@ -42,20 +41,6 @@ body {
 	background-color: #A4A4A4;
 }
 
-.header > .title {
-	position: absolute;
-	top: 65%;
-	width: 100%;
-	color: rgba(0, 0, 0, 0.92);
-	font-family: 'Space Mono', monospace;
-	text-align: left;
-	font-size: 30px;
-	/*visibility: hidden;*/
-	/*animation: titleAnimation 2s forwards;
-	animation-delay: 0.5s;*/
-
-}
-
 .header > .title-img {
 	width: 100%;
 	background-image: url("../images/portada.jpg");
@@ -67,13 +52,26 @@ body {
 }
 
 .header > .foto {
+	margin-top: 5%;
+	margin-left: 5%;
 	max-width: 50%;
 	float: left;
 }
 
-.header > .intro {
-	max-width: 50%;
+.header > .title {
+	position: absolute;
+	top: 65%;
+	width: 50%;
 	float: right;
+	color: rgba(0, 0, 0, 0.92);
+	font-family: 'Frijole', cursive;
+	text-align: right;
+	font-size: 40px;
+	margin-left: 40%;
+	margin-right: 5%;
+	/*visibility: hidden;*/
+	/*animation: titleAnimation 2s forwards;
+	animation-delay: 0.5s;*/
 }
 
 .jamal-photo img {
@@ -98,5 +96,13 @@ body {
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: center;
+}
+
+.clearfix:after {
+	content: " "; /* Older browser do not support empty content */
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
 }
 

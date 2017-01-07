@@ -3,19 +3,19 @@
 <head>
 	<title>JMaldonado - Full Stack Developer</title>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/grid.css">
+	<link rel="stylesheet" type="text/css" href="style/timeline.css">
 	<link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">	
 	<meta charset="UTF-8">
 </head>
 
 <body>
-	<header class="header">
-		<div class="foto">
-			<figure class="jamal-photo">
-				<img src="images/foto.jpg" alt="El menda">
-			</figure>
-		</div>
-		<div class="title">Mi vida en una web</div>	
+	<header class="header">		
+		<div class="title">
+			<p>"Look at me,<br/> I worked my way up from nothing<br/> to a state of extreme poverty"</p>
+			<p class="author"> ** Groucho Marx ** </p>
+		</div>	
 		<div id="title-img-animation" class="title-img"></div>
 	</header>
 	<nav class="navbar">
@@ -44,24 +44,62 @@
 		</ul>
 	</nav>
 	<main class="container">
-		<section id="quien-soy" class="whoiam">
-
+		<section id="quien-soy" class="whoiam section-content">	
+			<div class="foto">
+				<figure class="jamal-photo">
+					<img src="images/foto.jpg" alt="El menda">
+				</figure>
+			</div>
+			<div class="info-me">
+				<h2 class="section-title">Quien soy</h2>
+				<strong>José Antonio Maldonado Jiménez. </strong>
+				<span>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</span>
+			</div>		
 		</section>
 
-		<section id="estudios" class="studies">
-			
+		<section id="estudios" class="studies section-content">
+			<div class="section-content container">
+				<h2 class="section-title">Educación</h2>
+				<div class="bar"></div>
+				<div class="timeline">
+					<div class="entry col-studies">
+						<h1>2000 - 2006</h1>
+						<h2>Lic. Documentación</h2>
+						<img src="images/ugr.png" alt="Universidad de Granada"/>
+						<p>Universidad de Granada</p>
+					</div>
+					<div class="entry col-studies">
+						<h1>2010 - 2011</h1>
+						<h2>Master SID</h2>
+						<img src="images/usal.jpg" alt="Universidad de Salamanca"/>
+						<p>Universidad de Salamanca</p>
+					</div>
+					<div class="entry col-studies">
+						<h1>2014 - 2016</h1>
+						<h2>DAM</h2>
+						<img src="images/dam.jpg" alt="Desarrollo Aplicaciones Multiplataforma"/>
+						<p>IES Ribera de Castilla - Valladolid</p>
+					</div>
+					<div class="entry col-studies">
+						<h1>2016 - Actualidad</h1>
+						<h2>Master Web Dev</h2>
+						<img src="images/kc.png" alt="Master Desarrollo Web"/>
+						<p>KeepCoding</p>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<section id="experiencia" class="experience">
 			
 		</section>
 
-		<section id="about-me" class="about-me">
+		<section id="sobremi" class="about-me">
 			
 		</section>
 	</main>
 	<footer class="footer">
-	José Antonio Maldonado - 2016	
+	José Antonio Maldonado &copy 2017	
 	</footer>
 </body>
 </html>

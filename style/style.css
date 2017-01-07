@@ -1,7 +1,12 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0px;
 	font-family: 'Space Mono', monospace;
 	height: 100%;
+	background-color:#B2BDAF;
 }
 
 .navbar {
@@ -51,27 +56,60 @@ body {
 	/*transition: all 0.5s;*/
 }
 
-.header > .foto {
-	margin-top: 5%;
-	margin-left: 5%;
+.header > .title {
+	position: absolute;
+	top: 33%;
+	width: 100%;
+	font-family: 'Frijole', cursive;
+	color: #263238;
+	text-align: center;
+	font-size: 45px;
+	font-style: italic;
+	text-shadow: -5px -5px 5px #aaa;
+	/*visibility: hidden;*/
+	/*animation: titleAnimation 2s forwards;
+	animation-delay: 0.5s;*/
+}
+
+.header > .title > .author {
+	font-style: normal;
+}
+
+.container {
+	min-height: 100%;
+	margin-bottom: -50px;
+}
+
+h2 {
+	font-family: 'Frijole', cursive;
+	color: #212121;
+	font-style: italic;
+}
+
+.section-content {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+	background: #593709; /* Old browsers */
+	background: -moz-linear-gradient(top, #593709 0%, #8E5D18 44%, #B1853C 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #593709 0%,#8E5D18 44%,#B1853C 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #593709 0%,#8E5D18 44%,#B1853C 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8E5D18', endColorstr='#6d0019',GradientType=0 ); /* IE6-9*/
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.whoiam {
+	display: flex;
+}
+
+.whoiam > .foto {
 	max-width: 50%;
 	float: left;
 }
 
-.header > .title {
-	position: absolute;
-	top: 65%;
-	width: 50%;
+.whoiam > .info-me {
+	max-width: 60%;
 	float: right;
-	color: rgba(0, 0, 0, 0.92);
-	font-family: 'Frijole', cursive;
-	text-align: right;
-	font-size: 40px;
-	margin-left: 40%;
-	margin-right: 5%;
-	/*visibility: hidden;*/
-	/*animation: titleAnimation 2s forwards;
-	animation-delay: 0.5s;*/
+	text-align: justify;
 }
 
 .jamal-photo img {
@@ -82,9 +120,15 @@ body {
 	padding-bottom: 50px;
 }
 
-.container {
-	min-height: 100%;
-	margin-bottom: -50px;
+.team-member-photo img {
+	height: 300px;
+	max-width: 100%;
+	border-radius: 50%;
+}
+
+.section-title {
+	text-align: center;
+	font-size: 35px;
 }
 
 .footer {

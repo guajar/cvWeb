@@ -1,9 +1,9 @@
-document.getElementById("video").addEventListener("click" , function(event) {
+document.getElementById("video-me").addEventListener("click" , function(event) {
 	launchFullScreen(this);
 	this.play();
 });
 
-document.getElementById("video").addEventListener("ended", function(event){
+document.getElementById("video-me").addEventListener("ended", function(event){
     exitFullScreen();
 });
 

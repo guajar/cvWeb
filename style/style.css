@@ -32,6 +32,7 @@ body {
 .navbar > .navbar-list > .navbar-item {
 	display: inline-block;
 	font-size: 16px;
+	font-weight: bold;
 }
 
 .navbar > .navbar-list > .navbar-item > .navbar-link {
@@ -59,7 +60,6 @@ body {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position: center center;
-	/*transition: all 0.5s;*/
 }
 
 .header > .title {
@@ -72,9 +72,50 @@ body {
 	font-size: 45px;
 	font-style: italic;
 	text-shadow: -5px -5px 5px #aaa;
-	/*visibility: hidden;*/
-	/*animation: titleAnimation 2s forwards;
-	animation-delay: 0.5s;*/
+}
+
+/* Animation Title */
+
+.header > .title > p {
+  	white-space: nowrap;
+  	overflow: hidden;
+  	width: 30em;
+  	animation: type 4s steps(60, end); 
+}
+
+.header > .title > p:nth-child(2){
+  	animation: type2 8s steps(60, end);
+}
+
+.header > .title > p {
+  	text-decoration: none;
+}
+
+.author:hover {
+	text-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(2.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(2.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(2.5);
+    transition: all 200ms ease-in;
+    transform: scale(2.5);
+}
+
+@keyframes type{ 
+  	from { width: 0; } 
+} 
+
+@keyframes type2{
+  	0%{width: 0;}
+  	50%{width: 0;}
+  	100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  	to{opacity: .0;}
 }
 
 .header > .title > .author {
@@ -88,12 +129,6 @@ h2 {
 }
 
 .section-content {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
-	/*background: #593709; /* Old browsers */
-	/*background: -moz-linear-gradient(top, #593709 0%, #B1853C 44%, #593709 100%); /* FF3.6-15 */
-	/*background: -webkit-linear-gradient(top, #593709 0%,#B1853C 44%,#593709 100%); /* Chrome10-25,Safari5.1-6 */
-	/*background: linear-gradient(to bottom, #593709 0%,#B1853C 44%,#593709 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8E5D18', endColorstr='#6d0019',GradientType=0 ); /* IE6-9*/
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
@@ -237,34 +272,177 @@ hr.separator:before {
 
 /* Contacto */
 
+.contact-container {
+	display: flex;
+}
+
+.map {
+	float: left;
+	width: 50%;
+}
+
+.formu {
+	float: right;
+	width: 50%;
+	margin-left: 3%;
+	height: 400px;
+}
+
+#feedback-page{
+	text-align:center;
+}
+
+#text-feedback{
+	width: 80%;
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color:white;
+	text-align:center;
+}
+
 .form {
-	padding: 0 20px;
+	background-color:#3c3c3c;
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:15px;
+	padding-bottom:50px;
+	max-height: 400px;
 }
 
-.form .form-row {
-	padding: 10px;
+.feedback-input {
+	opacity:0.9;
+	color:#0493bd;
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  	font-weight:400;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+  	border: 3px solid #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-input {
-	padding: 4px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid #3498db;
+	color: #3498db;
+	outline: none;
+  	padding: 13px 13px 13px 54px;
 }
 
-input[type=button], input[type=submit], input[type=rest], button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 40px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 0px;
+.focused{
+	color:#30aed6;
+	border:#30aed6 solid 3px;
 }
 
-#too-many-enemies {
-	display: none;
+/* Icons ---------------------------------- */
+#name{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
 }
+
+#name:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+  	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email{
+	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#comment{
+	background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+	line-height: 150%;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	background-color:white;
+}
+
+#button-blue{
+	font-family: 'Montserrat', Helvetica, Arial,  sans-serif;
+	float:left;
+	width: 100%;
+	border: #fbfbfb solid 4px;
+	cursor:pointer;
+	background-color: #3498db;
+	color:white;
+	font-size:24px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
+	
+.submit:hover {
+	color: #3498db;
+}
+	
+.ease {
+  	border-top:3px #3c3c3c solid;
+	width: 0px;
+	height: 76px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.submit:hover .ease{
+  	width:100%;
+ 	 background-color:white;
+}
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+
 
 #googleMap {
 	height: 400px;

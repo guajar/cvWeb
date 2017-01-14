@@ -55,7 +55,6 @@ form.addEventListener("submit", function(event){
     var emailInput = document.getElementById("email");
     var telef = document.getElementById("telefono");
     var selHowto = document.getElementById("otherSelector");
-    var submitInput = document.getElementById("enviar");    
 
     if(inputNombre.checkValidity() == false) {
         alert("Escribe tu nombre");
@@ -80,7 +79,7 @@ form.addEventListener("submit", function(event){
 
     var index = selHowto.selectedIndex;
     if( index == null || index == 0 ) {
-        alert("Escribe selección válida");
+        alert("Selección válida");
         selHowto.focus();
         event.preventDefault();
         return false;

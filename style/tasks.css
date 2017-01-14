@@ -8,24 +8,28 @@
 	height: 50px;
 	line-height: 50px;
 	width: 100%;
-	background-color: lightgray;
+	background-color: antiquewhite;
 	padding-left: 10px;
 	padding-right: 10px;
 	border-bottom: 1px solid black;
 }
 
 #tasksContainer .task-item button {
+	margin-top: 5px;
 	height: 40px;
 	float: right;
 	background-color: rgba(255, 0, 0, 0.62);
 }
 
-#newTaskName,
-.update-task-input {
+#newTaskName, .update-task-input {
 	border-radius: 0;
 	padding: 10px;
 	border: 1px solid #dcdcdc;
 	transition: border 0.3, box-shadow 0.3s;
+}
+
+.update-task-input {
+	width: 60%;
 }
 
 #newTaskName:focus,
@@ -35,11 +39,11 @@
 	box-shadow: 0 0 5px 1px #969696;
 }
 
-.task-form {
+.task-div {
 	text-align: center;
 }
 
-.task-form > input {
+#newTaskName {
 	width:75%;
 }
 
@@ -62,6 +66,7 @@
 }
 
 .loader {
+	margin-left: 45%;
 	border: 10px solid #f3f3f3;
 	border-top: 10px solid #b43838;
 	border-radius: 50%;
@@ -73,4 +78,8 @@
 @keyframes spin {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
+}
+
+.footer {
+	margin-top: -50px;
 }

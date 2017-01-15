@@ -10,9 +10,10 @@ body {
 	margin: 0px;
 	font-family: 'Space Mono', monospace;
 	height: 100%;
-	/*background-color: #B78938;*/
-	background-color: #A4A4A4;
+	background-color: #B78938;
+	/*background-color: #A4A4A4;*/
 	overflow-x: hidden;
+
 }
 
 .navbar {
@@ -21,6 +22,13 @@ body {
 	position: fixed;
 	top: 0;
 	z-index: 100;
+}
+
+.navbar > .navbar-title {
+	list-style-type: none;
+	margin: 0;
+	float: left;
+	font-size: 0;
 }
 
 .navbar > .navbar-list {
@@ -46,12 +54,12 @@ body {
 
 .navbar > .navbar-list > .navbar-item.active > .navbar-link {
 	color: #F7F7F7;
-	background-color: #A4A4A4;
+	background-color: #B78938;
 }
 
 .navbar > .navbar-list > .navbar-item > .navbar-link:hover {
 	color: #F7F7F7;
-	background-color: #A4A4A4;
+	background-color: #B78938;
 }
 
 .header > .title-img {
@@ -124,7 +132,6 @@ body {
 }
 
 h2 {
-	font-family: 'Frijole', cursive;
 	color: #212121;
 	font-style: italic;
 }
@@ -177,6 +184,20 @@ h2 {
 	text-align: justify;
 }
 
+/* List Style */
+
+.ul_list {
+  	list-style: none;
+}
+
+.li_list {
+	text-indent: -10px;
+ }
+
+.material-icons.md-48 { 
+	font-size: 48px;
+ }
+
 /* Separador */
 
 hr.separator { 
@@ -226,7 +247,8 @@ hr.separator:before {
 }
 
 .blue span {
-    background-color: #34c2e3;   
+    background-color: #34c2e3;
+	width: 90%;   
 }
 
 .orange span {
@@ -259,7 +281,12 @@ hr.separator:before {
 }
 
 @keyframes animate-stripes {
-    0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+    0% {
+		background-position: 0 0;
+	} 
+	100% {
+		background-position: 60px 0;
+	}
 }
 
 .about-me > .hobbies {
@@ -273,7 +300,7 @@ hr.separator:before {
 	float: right;
 }
 
-.container {
+.container {	
 	min-height: 100%;
 	margin-bottom: -50px;
 }

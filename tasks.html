@@ -3,12 +3,13 @@
 <head>
 	<title>JMaldonado - Full Stack Developer</title>
 	<meta charset="UTF-8">
+	<link rel="icon" type="image/x-icon" href="images/favicon-code.ico">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/grid.css">
     <link rel="stylesheet" type="text/css" href="style/tasks.css">
     <script src="js/jquery-3.1.1.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -40,25 +41,31 @@
 	
     <main class="container">
         <section class="section-content row">
-            <h2 class="section-title">"Cosas" que aprender</h2>
+			<h2 class="section-title">
+				<i class="zmdi zmdi-attachment-alt zmdi-hc-1x"></i>
+				Tareas
+				</h2>
+			<div id="task-contain">
+				<div class="task-div col-6">                
+					<form class="task-form">
+						<h3>Añadir Tarea</h3>
+						<input type="text" id="newTaskName" class="task-inputs" name="name" placeholder="Nueva tarea..." required>
+						<br>
+						<br>
+						<button id="sendNewTask"class="task-button">Enviar</button>
+					</form>
+				</div>
 
-            <div class="task-div col-6">                
-                <form class="task-form">
-                    <h3>Añadir</h3>
-                    <input type="text" id="newTaskName" class="task-inputs" name="name" placeholder="Nueva tarea..." required>
-                    <br>
-                    <br>
-                    <button id="sendNewTask"class="task-button">Enviar</button>
-                </form>
-            </div>
+				<div class="v-separator"></div>
 
-            <div class="task-div col-6">
-                <h3>"Cosas" pendientes</h3>
-                <div class="loader"></div>
-                <div>
-                    <ul id="tasksContainer"></ul>
-                </div>
-            </div>
+				<div class="task-div col-6">
+					<h3>Tareas pendientes</h3>
+					<div class="loader"></div>
+					<div>
+						<ul id="tasksContainer"></ul>
+					</div>
+				</div>
+			</div>
         </section>
 	</main>
     

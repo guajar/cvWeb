@@ -1,3 +1,4 @@
+
 #tasksContainer {
 	list-style: none;
 	padding: 0;
@@ -14,11 +15,10 @@
 	border-bottom: 1px solid black;
 }
 
-#tasksContainer .task-item button {
+#tasksContainer .task-item .deleteTask {
 	margin-top: 5px;
 	height: 40px;
 	float: right;
-	background-color: rgba(255, 0, 0, 0.62);
 }
 
 #newTaskName, .update-task-input {
@@ -41,13 +41,14 @@
 
 .task-div {
 	text-align: center;
+	margin: 25px;
 }
 
 #newTaskName {
 	width:75%;
 }
 
-.task-button {
+.task-button, .deleteTask {
 	width:30%;
 	margin-top: 5px;
 	font-size: 12px;
@@ -65,6 +66,36 @@
 	transition:all .1s ease-in-out;
 }
 
+.deleteTask {
+	width:15%;
+}
+
+.task-button:hover, .deleteTask:hover {
+	color:#FFF;
+	border:2px solid #dd4545;
+	background: #b43838;
+	cursor:pointer;
+}
+
+
+#task-contain {
+	display: flex;
+	/*background: #B78938;*/
+	background: #dcdcdc;
+}
+
+.v-separator {
+	margin-top: 15px;
+	margin-bottom: 15px;
+    content: "";
+    display: inline-block;
+    width: 0px;
+	height: 400px;
+    border-right: 1px solid #fafafa;
+    border-left: 1px solid #b43838;
+    padding: 0;
+}
+
 .loader {
 	margin-left: 45%;
 	border: 10px solid #f3f3f3;
@@ -79,6 +110,7 @@
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
 }
+
 
 .footer {
 	margin-top: -50px;
